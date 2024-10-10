@@ -37,6 +37,7 @@ main {
     width: 100%;
     margin-top: 0;
     left: 0;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -295,4 +296,50 @@ h4 {
     margin-right: 5px;
     font-size: 1.5rem;
     color: #ff6347;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+
+    /* Navbar stacking vertically */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Contact grid items stacking vertically */
+    .card-content {
+        grid-template-columns: 1fr; /* Stacks grid items vertically */
+    }
+
+    /* Make images responsive */
+    .profile-picture img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Adjusting padding and spacing */
+    main {
+        padding: 10px;
+        padding-bottom: 100px;
+    }
+
+    .education-section, .experience-section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .contact-card {
+        height: auto;
+        padding: 10px;
+    }
+
+    .background-image {
+        background-size: cover;
+        height: 50vh; /* Adjust the height of background image */
+    }
+
+    .profile-info h1, .profile-info h3 {
+        font-size: 1.5rem; /* Make heading smaller for mobile */
+    }
 }
